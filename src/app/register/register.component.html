@@ -1,0 +1,28 @@
+<form ngNativeValidate>
+    <h1>REGISTRATION FORM</h1>
+    <div>
+            <p>Email:</p><br>
+            <input type="email"  
+            [(ngModel)]="Email"
+             name="t2" value="" 
+             placeholder="enter email"
+              required/><br>
+            <p>Password:</p><br>
+            <input type="password"
+              [(ngModel)]="Password"
+               name="t3" value=""
+                placeholder="enter password"
+                 required/><br>
+            <p>Confirm Password:</p><br>
+            <input type="password"  
+            [(ngModel)]="cPassword" 
+            name="t4" value="" 
+            placeholder="confirm password"
+             required/><br><br>
+            <button (click)="login(Firstname,Email,Password,cPassword)">Login</button>
+            <h3>{{status}}</h3>
+    
+    </div>
+    </form>
+    
+
