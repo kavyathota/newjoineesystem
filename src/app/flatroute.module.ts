@@ -12,25 +12,36 @@ import { AdminComponent } from './admin/admin.component';
 import { PayrollComponent } from './payroll/payroll.component';
 import { TeamComponent } from './team/team.component';
 import { HolidayComponent } from './holiday/holiday.component';
+import { MainComponent } from './main/main.component';
+import { LoggedComponent } from './logged/logged.component';
+import { UnloggedComponent } from './unlogged/unlogged.component';
+
 export const myroute:Routes=[
-  {path:"",redirectTo:"home",pathMatch:'full'},
-  {path:"home",component:HomeComponent},
-{path:"about",component:AboutComponent},
-  {path:"login",component:LoginComponent},
-{path:"register",component:RegisterComponent},
-{path:"**",component:UserComponent}]
-export const myroute1:Routes=[
-  {path:"",redirectTo:"home",pathMatch:'full'},
-  {path:"login/user",component:UserComponent},
-{path:"login/admin",component:AdminComponent},
- {path:"**",component:ErrorComponent}]
+  {path:"",redirectTo:"/main/unlogged",pathMatch:'full'},
+  {path:"main",component:MainComponent, children: [
+    { path: "unlogged", component: UnloggedComponent, children: [
+      { path: "login", component: LoginComponent },
+      { path: "register", component: RegisterComponent },
+      { path: "about", component: AboutComponent },
+      { path: "home", component: HomeComponent }
+    ] },
+    { path: "logged", component: UserComponent, children: [
+      { path: "team", component: TeamComponent },
+      { path: "holidays", component: HolidayComponent },
+      { path: "payroll", component: PayrollComponent }
+    ] }, 
+    // { path: "login", component: LoginComponent },
+    // { path: "register", component: RegisterComponent },
+    // { path: "about", component: AboutComponent },
+    // { path: "home", component: HomeComponent },
+  ]},
+{path:"**",component:ErrorComponent}]
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forRoot(myroute),
-    RouterModule.forRoot(myroute1)
+    RouterModule.forRoot(myroute)
   ],
   exports:[
     RouterModule

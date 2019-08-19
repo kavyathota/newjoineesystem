@@ -13,6 +13,9 @@ import { AdminComponent } from './admin/admin.component';
 import { PayrollComponent } from './payroll/payroll.component';
 import { TeamComponent } from './team/team.component';
 import { HolidayComponent } from './holiday/holiday.component';
+import { MainComponent } from './main/main.component';
+import { UnloggedComponent } from './unlogged/unlogged.component';
+import { LoggedComponent } from './logged/logged.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { HolidayComponent } from './holiday/holiday.component';
     AdminComponent,
     PayrollComponent,
     TeamComponent,
-    HolidayComponent
+    HolidayComponent,
+    MainComponent,
+    UnloggedComponent,
+    LoggedComponent
   ],
   imports: [
     BrowserModule,
