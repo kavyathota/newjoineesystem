@@ -1,15 +1,23 @@
+
 <br><br><br>
-<h1>LOGIN</h1>
-<div>
+<div *ngIf="!show">
+        <h1>LOGIN</h1>
         Username :<input type="text" [(ngModel)]="username" value="" placeholder="enter username" /> 
         <br>
         Password :<input type="password" [(ngModel)]="password" value="" placeholder="enter password"/>
         <br><br>
-        <button (click)="Login(username,password)">Login</button>
+        <button (click)="Login(username,password)" >Login
+        </button>
+        
         <br><br>
-        <img *ngIf="show; else elsetemp" src="../../assets/download.png"/>
-        <ng-template #elsetemp>
-            <img src="../../assets/download1.jpg"/>
+        <img *ngIf="show; else elsetemp" src="../assets/download.png"/>
+        <ng-template #elsetemp >
+            <img src="../assets/download1.jpg"/>
         </ng-template>
         <h5>{{status}}</h5>
+    
         </div>
+        <div *ngIf="show">
+            <app-user></app-user>
+        </div>
+       

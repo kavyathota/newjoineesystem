@@ -1,5 +1,5 @@
 
-<div class="navbar">
+<!-- <div class="navbar">
     <button (click)="_home()">HOME</button>
 <button (click)="_register()">REGISTER</button>
 <button (click)="_login()">LOGIN</button>
@@ -8,6 +8,16 @@
 <div *ngIf="Home"><br><br><h1>WELCOME</h1></div>
 <div *ngIf="Register"><app-register></app-register></div>
 <div *ngIf="Login"><app-login></app-login></div>
-<div *ngIf="About"><h1>ABOUT US</h1></div>
+<div *ngIf="About"><h1>ABOUT US</h1></div> -->
+<body>
+        <h1> NEW JOINEE SYSTEM</h1>
+<div class="navbar">
+   
+<a routerLink="home">HOME</a>
+<a routerLink="register">REGISTER</a>
+<a routerLink="login">LOGIN</a>
+<a routerLink="about">ABOUT</a>
 
-
+</div>
+<router-outlet></router-outlet>
+</body>

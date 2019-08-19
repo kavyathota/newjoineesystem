@@ -6,13 +6,27 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FlatrouteModule } from './flatroute.module';
 import { ErrorComponent } from './error/error.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { UserComponent } from './user/user.component';
+import { AdminComponent } from './admin/admin.component';
+import { PayrollComponent } from './payroll/payroll.component';
+import { TeamComponent } from './team/team.component';
+import { HolidayComponent } from './holiday/holiday.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ErrorComponent
+    ErrorComponent,
+    HomeComponent,
+    AboutComponent,
+    UserComponent,
+    AdminComponent,
+    PayrollComponent,
+    TeamComponent,
+    HolidayComponent
   ],
   imports: [
     BrowserModule,
