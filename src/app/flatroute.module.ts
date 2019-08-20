@@ -18,7 +18,7 @@ import { UnloggedComponent } from './unlogged/unlogged.component';
 import { AdministrationComponent } from './administration/administration.component';
 
 export const myroute:Routes=[
-  {path:"",redirectTo:"/main/unlogged",pathMatch:'full'},
+  {path:"",redirectTo:"/main/unlogged/home",pathMatch:'full'},
   {path:"main",component:MainComponent, children: [
     { path: "unlogged", component: UnloggedComponent, children: [
       { path: "login", component: LoginComponent },
