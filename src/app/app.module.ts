@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http'
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -16,6 +18,7 @@ import { HolidayComponent } from './holiday/holiday.component';
 import { MainComponent } from './main/main.component';
 import { UnloggedComponent } from './unlogged/unlogged.component';
 import { LoggedComponent } from './logged/logged.component';
+import { AdministrationComponent } from './administration/administration.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +35,14 @@ import { LoggedComponent } from './logged/logged.component';
     HolidayComponent,
     MainComponent,
     UnloggedComponent,
-    LoggedComponent
+    LoggedComponent,
+    AdministrationComponent
   ],
   imports: [
     BrowserModule,
     FlatrouteModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

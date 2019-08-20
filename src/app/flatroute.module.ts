@@ -15,6 +15,7 @@ import { HolidayComponent } from './holiday/holiday.component';
 import { MainComponent } from './main/main.component';
 import { LoggedComponent } from './logged/logged.component';
 import { UnloggedComponent } from './unlogged/unlogged.component';
+import { AdministrationComponent } from './administration/administration.component';
 
 export const myroute:Routes=[
   {path:"",redirectTo:"/main/unlogged",pathMatch:'full'},
@@ -28,7 +29,8 @@ export const myroute:Routes=[
     { path: "logged", component: UserComponent, children: [
       { path: "team", component: TeamComponent },
       { path: "holidays", component: HolidayComponent },
-      { path: "payroll", component: PayrollComponent }
+      { path: "payroll", component: PayrollComponent },
+      { path: "administration", component: AdministrationComponent },
     ] }, 
     // { path: "login", component: LoginComponent },
     // { path: "register", component: RegisterComponent },
