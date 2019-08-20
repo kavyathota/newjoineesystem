@@ -24,6 +24,26 @@ export class AdministrationComponent implements OnInit {
             .catch(error => this.status = "Connection to server failed.")
   }
 
+
+  addEmployee(pNewEmployee) {
+    this.http.post("http://localhost:3000/newJoinees", {
+      name: pNewEmployee
+    })
+            .toPromise()
+            .then(data => {
+              this.getNewJoinees();
+            })
+            .catch(error => this.status = "Connection to server failed.")
+  }
+
+  deleteEmployee(pid) {
+     this.http.delete("http://localhost:3000/newJoinees/" + pid)
+            .toPromise()
+            .then(data => {
+              this.getNewJoinees();
+            })
+            .catch(error => this.status = "Connection to server failed.")
+  }
   ngOnInit() {
     this.getNewJoinees();
   }
