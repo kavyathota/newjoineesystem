@@ -1,0 +1,11 @@
+{{status}}
+<ol *ngFor="let item of newJoinees">
+    <li>
+        <a (click)="item.show = !item.show">{{item.name}}</a>
+        <div *ngIf="item.show" style="background-color: aqua">
+            <a >Update</a>
+            <br>
+            <a >Delete</a>
+        </div>
+    </li>
+</ol>

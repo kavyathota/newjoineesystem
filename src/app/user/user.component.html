@@ -1,0 +1,29 @@
+<!-- <a routerLink="/user/payroll">payroll</a><br>
+<a routerLink="/user/team">team</a><br>
+<a routerLink="/user/holiday">holiday</a><br>
+<router-outlet></router-outlet> -->
+<!-- <div class="navbar">
+<button (click)="fun1()" >team
+    </button>
+    <button (click)="fun2()" >holidays list
+        </button>
+        <button (click)="fun3()" >payroll
+            </button>
+        </div> -->
+<!-- <div *ngIf="show1">
+        <app-team></app-team>
+    </div>
+    <div *ngIf="show2">
+            <app-holiday></app-holiday>
+        </div>
+        <div *ngIf="show3">
+                <app-payroll></app-payroll>
+            </div> -->
+<div class="navbar">
+<a routerLink="/main/logged/team">Team</a>
+<a routerLink="/main/logged/holidays">Holidays</a>
+<a routerLink="/main/logged/payroll">Payroll</a>
+<a routerLink="/main/logged/administration">Administration</a>
+</div>
+
+<router-outlet></router-outlet>
